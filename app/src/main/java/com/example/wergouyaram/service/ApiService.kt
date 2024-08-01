@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 class ApiService {
 
     companion object{
-        val base_url = "https://wergouyaram.ctu.sn/api/"
+        val base_url:String = "https://wergouyaram.ctu.sn/api/"
 
         val client = OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS) // Set connect timeout

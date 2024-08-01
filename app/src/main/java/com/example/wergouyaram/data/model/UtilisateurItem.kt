@@ -3,10 +3,7 @@ package com.example.wergouyaram.data.model
 import com.google.gson.annotations.SerializedName
 
 data class UtilisateurItem(
-    @SerializedName("created_at")
-    val created_at: String,
-    @SerializedName("dernier_vue")
-    val dernier_vue: Any,
+
 
 
     @SerializedName("email")
@@ -36,9 +33,15 @@ data class UtilisateurItem(
     @SerializedName("telephone")
     val telephone: String,
 
-    @SerializedName("updated_at")
+    @SerializedName("success")
+    val success: Boolean,
 
-    val updated_at: String
+    @SerializedName("message")
+    val message: String
+
+
+
+
 
 
 )
