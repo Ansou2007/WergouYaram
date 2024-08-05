@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
 import android.widget.Toast
+import com.example.wergouyaram.data.model.LoginResponse
 import com.example.wergouyaram.data.model.UtilisateurItem
 import com.example.wergouyaram.databinding.ActivityLoginBinding
 import com.example.wergouyaram.service.ApiService
@@ -97,6 +98,7 @@ class login : AppCompatActivity() {
                             val sharedPref = getSharedPreferences("user_session", MODE_PRIVATE)
                             val editor = sharedPref.edit()
                             editor.putString("prenom",loginResponse.user.prenom)
+                            editor.putInt("id",loginResponse.user.id)
                             editor.apply()
                             // Handle successful login
                             Toast.makeText(this@login, "Connexion réussie", Toast.LENGTH_SHORT).show()

@@ -21,7 +21,14 @@ class Pharmacien_dashboard : AppCompatActivity() {
         val btn_liste_pharmacie: ImageView = findViewById(R.id.imageViewListPharmacie)
         val btn_liste_garde: ImageView = findViewById(R.id.imageViewListGarde)
         val btn_logout: ImageView = findViewById(R.id.imageViewLogout)
+        val btn_pharamacie: ImageView = findViewById(R.id.imageViewPharmacie)
+        val btn_garde: ImageView = findViewById(R.id.imageViewGarde)
 
+        // Bouton Ma pharmacie
+        btn_pharamacie.setOnClickListener {
+            val intent = Intent(this,pharmacie_edition::class.java)
+            startActivity(intent)
+        }
         // Btn liste Pharmacy
         btn_liste_pharmacie.setOnClickListener {
             val intent = Intent(this,Pharmacy_list::class.java)

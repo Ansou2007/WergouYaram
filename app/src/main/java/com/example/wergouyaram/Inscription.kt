@@ -1,5 +1,6 @@
 package com.example.wergouyaram
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -33,16 +34,15 @@ class Inscription : AppCompatActivity() {
         binding.imageback.setOnClickListener{
             finish()
         }
-        // Bouton s'inscrire
 
+        // Bouton s'inscrire
         binding.btnInscrire.setOnClickListener {
             if(validation()){
                 inscription()
-                Toast.makeText(this ,"Enregistrement avec success",Toast.LENGTH_SHORT).show()
+
+                //Toast.makeText(this ,"Enregistrement avec success",Toast.LENGTH_SHORT).show()
             }
         }
-
-
 
     }
 
@@ -95,7 +95,10 @@ class Inscription : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     Toast.makeText(this@Inscription, "Enregistrement avec succès", Toast.LENGTH_SHORT).show()
-                    // Vous pouvez maintenant naviguer vers l'écran de connexion ou une autre activité
+                    val intent = Intent(this@Inscription,login::class.java)
+                    startActivity(intent)
+                    // Completer le formulaire de la pharmacie
+
                 } else {
                     Toast.makeText(this@Inscription, "Erreur lors de l'enregistrement", Toast.LENGTH_SHORT).show()
                 }

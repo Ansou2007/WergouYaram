@@ -5,7 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class PharmacieItem(
     @SerializedName("id")
     val id: Int,
-
+    @SerializedName("user_id")
+    val user_id: Int,
     @SerializedName("title")
     val title: String,
 

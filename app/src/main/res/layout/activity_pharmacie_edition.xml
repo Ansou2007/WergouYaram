@@ -31,7 +31,7 @@
 
     <!--Longitude-->
     <LinearLayout
-        android:id="@+id/layoutPrenomInput"
+        android:id="@+id/layoutLongitudeInput"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_marginStart="24dp"
@@ -43,9 +43,8 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/textSignIn">
-
         <EditText
-            android:id="@+id/InputPrenom"
+            android:id="@+id/InputLongitude"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -56,7 +55,6 @@
             android:inputType="text"
             android:textColor="@color/secondary_item"
             android:textSize="16sp"/>
-
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imagePrenomIcon"
             android:layout_width="18dp"
@@ -73,8 +71,209 @@
         android:paddingEnd="12dp"
         android:text="Longitude"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@id/layoutPrenomInput"
-        app:layout_constraintStart_toStartOf="@id/layoutPrenomInput"
-        app:layout_constraintTop_toTopOf="@id/layoutPrenomInput"/>
+        app:layout_constraintBottom_toTopOf="@id/layoutLongitudeInput"
+        app:layout_constraintStart_toStartOf="@id/layoutLongitudeInput"
+        app:layout_constraintTop_toTopOf="@id/layoutLongitudeInput"/>
+
+    <!--Latitude-->
+    <LinearLayout
+        android:id="@+id/layoutLatitudeInput"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutLongitudeInput">
+        <EditText
+            android:id="@+id/InputLatitude"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints="emailAddress"
+            android:background="@null"
+            android:hint="latitude"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/secondary_item"
+            android:textSize="16sp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageLatitudeIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_user"
+            android:tint="@color/secondary_item"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Longitude"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/layoutLatitudeInput"
+        app:layout_constraintStart_toStartOf="@id/layoutLatitudeInput"
+        app:layout_constraintTop_toTopOf="@id/layoutLatitudeInput"/>
+
+    <Button
+        android:id="@+id/btn_geolocalisation"
+        android:layout_width="344dp"
+        android:layout_height="37dp"
+        android:text="Géolocaliser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLatitudeInput"
+        app:layout_constraintVertical_bias="0.049"
+        tools:ignore="MissingConstraints" />
+
+    <!--Nom Pharmacie-->
+    <LinearLayout
+        android:id="@+id/layoutNomInput"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_geolocalisation">
+        <EditText
+            android:id="@+id/InputNom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Nom Pharmacie"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/secondary_item"
+            android:textSize="16sp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageNomIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_user"
+            android:tint="@color/secondary_item"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Pharmacie"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/layoutNomInput"
+        app:layout_constraintStart_toStartOf="@id/layoutNomInput"
+        app:layout_constraintTop_toTopOf="@id/layoutNomInput"/>
+
+    <!--Telephone-->
+    <LinearLayout
+        android:id="@+id/layoutPhoneInput"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutNomInput">
+        <EditText
+            android:id="@+id/InputPhone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Télephone"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/secondary_item"
+            android:textSize="16sp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePhoneIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_phone"
+            android:tint="@color/secondary_item"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Adresse"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/layoutPhoneInput"
+        app:layout_constraintStart_toStartOf="@id/layoutPhoneInput"
+        app:layout_constraintTop_toTopOf="@id/layoutPhoneInput"/>
+
+    <!--Adresse-->
+    <LinearLayout
+        android:id="@+id/layoutAdresseInput"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneInput">
+        <EditText
+            android:id="@+id/InputAdresse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Télephone"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/secondary_item"
+            android:textSize="16sp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageAdresseIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_user"
+            android:tint="@color/secondary_item"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Adresse"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/layoutAdresseInput"
+        app:layout_constraintStart_toStartOf="@id/layoutAdresseInput"
+        app:layout_constraintTop_toTopOf="@id/layoutAdresseInput"/>
+    <Button
+        android:id="@+id/btn_valider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputAdresse"
+        tools:ignore="NotSibling" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
