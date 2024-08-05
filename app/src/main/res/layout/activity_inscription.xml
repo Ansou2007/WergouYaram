@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     android:background="@drawable/main_background_2"
     tools:context=".Inscription">
@@ -19,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
     <TextView
         android:id="@+id/textSignIn"
         android:layout_width="wrap_content"
@@ -30,8 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imageback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageback"
-        />
+        app:layout_constraintTop_toTopOf="@id/imageback" />
 
     <!--Prenom-->
     <LinearLayout
@@ -47,6 +46,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/textSignIn">
+
         <EditText
             android:id="@+id/InputPrenom"
             android:layout_width="0dp"
@@ -59,13 +59,15 @@
             android:inputType="text"
             android:textColor="@color/secondary_item"
             android:textSize="16sp"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imagePrenomIcon"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_mail"
+            android:src="@drawable/ic_user"
             android:tint="@color/secondary_item"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,11 +76,11 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:text="Prénom"
-
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/layoutPrenomInput"
         app:layout_constraintStart_toStartOf="@id/layoutPrenomInput"
         app:layout_constraintTop_toTopOf="@id/layoutPrenomInput"/>
+
     <!--Nom-->
     <LinearLayout
         android:id="@+id/layoutNomInput"
@@ -93,6 +95,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/layoutPrenomInput">
+
         <EditText
             android:id="@+id/InputNom"
             android:layout_width="0dp"
@@ -105,13 +108,15 @@
             android:inputType="text"
             android:textColor="@color/secondary_item"
             android:textSize="16sp"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageNomIcon"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_mail"
+            android:src="@drawable/ic_user"
             android:tint="@color/secondary_item"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,6 +129,7 @@
         app:layout_constraintBottom_toTopOf="@id/layoutNomInput"
         app:layout_constraintStart_toStartOf="@id/layoutNomInput"
         app:layout_constraintTop_toTopOf="@id/layoutNomInput"/>
+
     <!--Email-->
     <LinearLayout
         android:id="@+id/layoutEmailInput"
@@ -138,6 +144,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/layoutNomInput">
+
         <EditText
             android:id="@+id/InputEmail"
             android:layout_width="0dp"
@@ -150,6 +157,7 @@
             android:inputType="textEmailAddress"
             android:textColor="@color/secondary_item"
             android:textSize="16sp"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageEmailIcon"
             android:layout_width="18dp"
@@ -157,6 +165,7 @@
             android:src="@drawable/ic_mail"
             android:tint="@color/secondary_item"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -169,6 +178,7 @@
         app:layout_constraintBottom_toTopOf="@id/layoutEmailInput"
         app:layout_constraintStart_toStartOf="@id/layoutEmailInput"
         app:layout_constraintTop_toTopOf="@id/layoutEmailInput"/>
+
     <!--Telephone-->
     <LinearLayout
         android:id="@+id/layoutTelephoneInput"
@@ -183,6 +193,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/layoutEmailInput">
+
         <EditText
             android:id="@+id/InputTelephone"
             android:layout_width="0dp"
@@ -195,13 +206,15 @@
             android:inputType="number"
             android:textColor="@color/secondary_item"
             android:textSize="16sp"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageIcon"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_mail"
+            android:src="@drawable/ic_phone"
             android:tint="@color/secondary_item"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -215,20 +228,20 @@
         app:layout_constraintStart_toStartOf="@id/layoutTelephoneInput"
         app:layout_constraintTop_toTopOf="@id/layoutTelephoneInput"/>
 
-<!-- Mot de Passe-->
-
+    <!-- Mot de Passe-->
     <LinearLayout
         android:id="@+id/layoutPasswordInput"
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/background_input"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@id/layoutTelephoneInput"
-        tools:layout_editor_absoluteX="24dp">
+        app:layout_constraintTop_toBottomOf="@id/layoutTelephoneInput">
 
         <EditText
             android:id="@+id/InputPassword"
@@ -248,10 +261,10 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:src="@drawable/ic_lock"
-            android:tint="@color/secondary_item" />
+            android:tint="@color/secondary_item"/>
     </LinearLayout>
-    <TextView
 
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -264,21 +277,6 @@
         app:layout_constraintStart_toStartOf="@id/layoutPasswordInput"
         app:layout_constraintTop_toTopOf="@id/layoutPasswordInput"/>
 
-    <LinearLayout
-        android:id="@+id/layoutButtonInput"
-        android:layout_height="52dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:layout_width="match_parent"
-        app:layout_constraintBottom_toTopOf="@id/layoutPasswordInput"
-        app:layout_constraintStart_toStartOf="@+id/layoutPasswordInput"
-        app:layout_constraintTop_toTopOf="@id/layoutPasswordInput">
-
-    </LinearLayout>
     <Button
         android:id="@+id/btnInscrire"
         android:layout_width="wrap_content"
@@ -288,7 +286,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPasswordInput"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/layoutPasswordInput"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

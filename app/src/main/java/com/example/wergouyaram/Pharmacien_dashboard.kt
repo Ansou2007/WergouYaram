@@ -20,6 +20,7 @@ class Pharmacien_dashboard : AppCompatActivity() {
 
         val btn_liste_pharmacie: ImageView = findViewById(R.id.imageViewListPharmacie)
         val btn_liste_garde: ImageView = findViewById(R.id.imageViewListGarde)
+        val btn_logout: ImageView = findViewById(R.id.imageViewLogout)
 
         // Btn liste Pharmacy
         btn_liste_pharmacie.setOnClickListener {
@@ -30,6 +31,17 @@ class Pharmacien_dashboard : AppCompatActivity() {
         btn_liste_garde.setOnClickListener {
             val intent = Intent(this,GardeList::class.java)
             startActivity(intent)
+        }
+
+        // Deconnexion
+        btn_logout.setOnClickListener {
+            // nettoyer la session
+            val editor = sharedPref.edit()
+            editor.clear()
+            editor.apply()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
 

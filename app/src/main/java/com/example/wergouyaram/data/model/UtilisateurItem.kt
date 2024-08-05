@@ -18,7 +18,6 @@ data class UtilisateurItem(
     @SerializedName("nom")
     val nom: String,
 
-
     @SerializedName("photo")
     val photo: Any,
 
@@ -29,15 +28,10 @@ data class UtilisateurItem(
     @SerializedName("status")
     val status: Int,
 
-
     @SerializedName("telephone")
-    val telephone: String,
+    val telephone: String
 
-    @SerializedName("success")
-    val success: Boolean,
 
-    @SerializedName("message")
-    val message: String
 
 
 

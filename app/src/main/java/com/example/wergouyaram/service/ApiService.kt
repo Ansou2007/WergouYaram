@@ -25,5 +25,6 @@ class ApiService {
         }
 
         val utilisateurService: UtilisateurService = getApiService().create(UtilisateurService::class.java)
+
     }
 }
