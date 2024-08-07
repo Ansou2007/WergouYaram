@@ -26,6 +26,7 @@ class ApiService {
 
         val utilisateurService: UtilisateurService = getApiService().create(UtilisateurService::class.java)
         val pharmacieService: PharmacieService = getApiService().create(PharmacieService::class.java)
+        val gardeService: GardeService = getApiService().create(GardeService::class.java)
 
 
     }

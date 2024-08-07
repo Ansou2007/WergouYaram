@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gardes_edition">
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imageback"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/ic_back"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/textSignIn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Ajouter Garde"
+      android:textColor="@color/secondary_item"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="@id/imageback"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/imageback" />
+
+  <!-- Date Debut -->
+  <LinearLayout
+      android:id="@+id/layoutDateDebutInput"
+      android:layout_width="match_parent"
+      android:layout_height="52dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="72dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/background_input"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingStart="20dp"
+      android:paddingEnd="20dp"
+      app:layout_constraintTop_toBottomOf="@id/textSignIn">
+
+    <EditText
+        android:id="@+id/InputDateDebut"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="Date début"
+        android:imeOptions="actionNext"
+        android:focusable="false"
+        android:clickable="true"
+        android:textColor="@color/secondary_item"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageDateDebutIcon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/ic_calendar"
+        android:tint="@color/secondary_item"
+        />
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:background="@color/white"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:text="Date Début"
+      android:textSize="14sp"
+      app:layout_constraintBottom_toTopOf="@id/layoutDateDebutInput"
+      app:layout_constraintStart_toStartOf="@id/layoutDateDebutInput"
+      app:layout_constraintTop_toTopOf="@id/layoutDateDebutInput" />
+
+  <!-- Date Fin -->
+  <LinearLayout
+      android:id="@+id/layoutDateFinInput"
+      android:layout_width="match_parent"
+      android:layout_height="52dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/background_input"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingStart="20dp"
+      android:paddingEnd="20dp"
+      app:layout_constraintTop_toBottomOf="@id/layoutDateDebutInput">
+
+    <EditText
+        android:id="@+id/InputDateFin"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="Date fin"
+        android:imeOptions="actionNext"
+        android:focusable="false"
+        android:clickable="true"
+        android:textColor="@color/secondary_item"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageDateFinIcon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/ic_calendar"
+        android:tint="@color/secondary_item"
+        />
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:background="@color/white"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:text="Date Fin"
+      android:textSize="14sp"
+      app:layout_constraintBottom_toTopOf="@id/layoutDateFinInput"
+      app:layout_constraintStart_toStartOf="@id/layoutDateFinInput"
+      app:layout_constraintTop_toTopOf="@id/layoutDateFinInput" />
+
+  <Button
+      android:id="@+id/btn_valider"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:text="Valider"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/layoutDateFinInput"
+      app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wergouyaram.R
+import android.content.Context
+import android.widget.Toast
 
-class PharmacyOneAdapter(private val pharmacyList: List<PharmacieItem>) :
+class PharmacyOneAdapter(private val context: Context,private val pharmacyList: List<PharmacieItem>) :
     RecyclerView.Adapter<PharmacyOneAdapter.PharmacyViewHolder>() {
 
     class PharmacyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -36,6 +38,26 @@ class PharmacyOneAdapter(private val pharmacyList: List<PharmacieItem>) :
             holder.textViewPhone.text = currentItem.telephone_portable ?: "Téléphone non disponible"
             holder.textViewAddress.text = currentItem.adresse ?: "Adresse non disponible"
             holder.textViewEmpty.visibility = View.GONE
+            /*
+            val pharmacyId = currentItem.id ?: -1 // Utiliser -1 si l'ID est nul
+            val sharedPreferences = context.getSharedPreferences("pharmacy_prefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putInt("pharmacy_id", pharmacyId)
+            editor.apply()
+             */
+            // Ajouter un écouteur de clic pour stocker l'ID dans SharedPreferences
+            holder.itemView.setOnClickListener {
+                val pharmacyId = currentItem.id ?: -1 // Utiliser -1 si l'ID est nul
+                val sharedPreferences = context.getSharedPreferences("session_pharmacie", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putInt("pharmacy_id", pharmacyId)
+                editor.apply()
+                // Optionnel : Afficher un message pour confirmer l'enregistrement de l'ID
+                Toast.makeText(context, "Pharmacie ID enregistré : $pharmacyId", Toast.LENGTH_SHORT).show()
+            }
+
+
+
         }
 
     }

@@ -115,6 +115,14 @@
                     android:textStyle="normal"
                     android:layout_marginStart="8dp"/> <!-- Ajoutez un espace entre le label et la date -->
             </LinearLayout>
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Aucune garde"
+                android:visibility="gone" />
 
 
         </LinearLayout>
