@@ -27,7 +27,7 @@ class PharmacyAdapter(private val pharmacyList: List<PharmacieItem>) :
     override fun onBindViewHolder(holder: PharmacyViewHolder, position: Int) {
         val currentItem = pharmacyList[position]
         holder.textViewName.text = currentItem.nom
-        holder.textViewPhone.text = currentItem.telephone_fixe
+        holder.textViewPhone.text = currentItem.telephone_portable
         holder.textViewAddress.text = currentItem.adresse
         // Ajoutez une image appropriée à imageView si nécessaire
     }

@@ -9,11 +9,10 @@ data class GardesItem(
     @SerializedName("date_fin")
     val date_fin: String,
 
-
     @SerializedName("garde_id")
     val garde_id: Int,
 
     @SerializedName("pharmacie")
-    val pharmacie: Pharmacie
+    val pharmacie: PharmacieItem
 
 )

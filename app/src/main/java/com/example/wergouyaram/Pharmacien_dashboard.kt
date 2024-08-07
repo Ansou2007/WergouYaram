@@ -26,7 +26,12 @@ class Pharmacien_dashboard : AppCompatActivity() {
 
         // Bouton Ma pharmacie
         btn_pharamacie.setOnClickListener {
-            val intent = Intent(this,pharmacie_edition::class.java)
+            val intent = Intent(this,MaPharmacie::class.java)
+            startActivity(intent)
+        }
+        // Mes Gardes
+        btn_garde.setOnClickListener {
+            val intent = Intent(this,MesGardes::class.java)
             startActivity(intent)
         }
         // Btn liste Pharmacy

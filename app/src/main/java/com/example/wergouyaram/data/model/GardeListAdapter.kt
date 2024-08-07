@@ -3,10 +3,8 @@ package com.example.wergouyaram.data.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wergouyaram.PharmacyAdapter
 import com.example.wergouyaram.R
 
 class GardeListAdapter(private val GardeList: List<GardesItem>) :
@@ -35,7 +33,7 @@ class GardeListAdapter(private val GardeList: List<GardesItem>) :
         holder.date_debut.text = currentItem.date_debut
         holder.date_fin.text = currentItem.date_fin
         holder.adresse.text = currentItem.pharmacie.adresse
-        holder.telephone.text = currentItem.pharmacie.telephone
+        holder.telephone.text = currentItem.pharmacie.telephone_portable
        // holder.textViewAddress.text = currentItem.adresse
         // Ajoutez une image appropriée à imageView si nécessaire
     }

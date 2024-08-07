@@ -4,13 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
+
 import android.widget.Toast
 import com.example.wergouyaram.data.model.User
-import com.example.wergouyaram.data.model.Utilisateur
-import com.example.wergouyaram.data.model.UtilisateurItem
+
 import com.example.wergouyaram.databinding.ActivityInscriptionBinding
 import com.example.wergouyaram.service.ApiService
 import kotlinx.coroutines.CoroutineScope
